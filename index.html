@@ -32,9 +32,9 @@
 
                 <li><a class="landing__nav-links--link landing__nav-links--link---active" href="">Home</a></li>
                 <li><a class="landing__nav-links--link" href="">Services</a></li>
-                <li><a class="landing__nav-links--link" href="">Skills</a></li>
-                <li><a class="landing__nav-links--link" href="">About me</a></li>
-                <li><a class="landing__nav-links--link" href="">Portfolio</a></li>
+                <li><a class="landing__nav-links--link scrolls" href="#skills">Skills</a></li>
+                <li><a class="landing__nav-links--link scrolls" href="#about">About me</a></li>
+                <li><a class="landing__nav-links--link scrolls" href="#portfolio">Portfolio</a></li>
                 <li><a class="landing__nav-links--link" href="/views/articles.html">Blog</a></li>
                 <li><a class="landing__nav-links--link" href="#popup">Admin</a></li>
 
@@ -56,7 +56,7 @@
             <p class="fullstack__description">
                 Specializing in full stack web development. If you are a business seeking
                  a web presence or are looking to hire then this is your destination
-                 <a href=""><img class="fullstack__description-query" alt="arrow" src="/img/arrow.svg"></a>
+                 <a href='#contact'class='scrolls'><img class="fullstack__description-query" alt="arrow" src="/img/arrow.svg"></a>
                  <!-- <button class="fullstack__description-query">&#8594;</button> -->
             </p>
         </header>
@@ -108,7 +108,7 @@
         </div>
     </main>
 
-    <div class="section">
+    <div class="section" id="skills">
       <section class="skills">
 
         <div class="skills__card">
@@ -186,7 +186,7 @@
     </section>
   </div>
 
-    <main class="about">
+    <main class="about" id="about">
         <img src="/img/profile-pic.jpg" alt="my photo" class="about__photo">
 
         <h3 class="about__name">
@@ -223,19 +223,17 @@ I guarantee 100% to offer the best products in all my works, so you can get your
         </div>
     </main>
 
-    <section class="portfolio">
-        <a href="" class="portfolio__previous">
-           <img src="/img/previous.png" alt="previous" class="portfolio__btn">	
-        </a>
-        <div class="portfolio__project">
+    <section class="portfolio" id="portfolio">
+        <button class="portfolio__btn portfolio__btn-next">&larr;</button>
+        <div class="portfolio__project portfolio__project-1 portfolio__project-active">
             <img src="/img/taalim.jpg" alt="Project image" class="portfolio__project-img">
             <div class="portfolio__project-card">
                 <div class="portfolio__project-card--tabs">
-                    <span class="portfolio__project-card--tabs---tab"></span>
-                    <span class="portfolio__project-card--tabs---tab"></span>
-                    <span class="portfolio__project-card--tabs---tab"></span>
-                    <span class="portfolio__project-card--tabs---tab"></span>
-                    <span class="portfolio__project-card--tabs---tab"></span>
+                    <div class="portfolio__project-card--tabs---tab"></div>
+                    <div class="portfolio__project-card--tabs---tab portfolio__project-card--tabs---tab-active"></div>
+                    <div class="portfolio__project-card--tabs---tab"></div>
+                    <div class="portfolio__project-card--tabs---tab"></div>
+                    <div class="portfolio__project-card--tabs---tab"></div>
                 </div>
                 <div class="portfolio__project-card--title">
                     <span class="portfolio__project-card--title---text">Taعlim platform</span> <span class="portfolio__project-card--title---year">2022</span>
@@ -247,13 +245,34 @@ I guarantee 100% to offer the best products in all my works, so you can get your
                 <button class="portfolio__project-card--link">Visit site</button>
             </div>
         </div>
-        <a href="" class="portfolio__next">
+        <div class="portfolio__project portfolio__project-2">
+            <img src="/img/taalim2.jpg" alt="Project image" class="portfolio__project-img">
+            <div class="portfolio__project-card">
+                <div class="portfolio__project-card--tabs">
+                    <div class="portfolio__project-card--tabs---tab"></div>
+                    <div class="portfolio__project-card--tabs---tab portfolio__project-card--tabs---tab-active"></div>
+                    <div class="portfolio__project-card--tabs---tab"></div>
+                    <div class="portfolio__project-card--tabs---tab"></div>
+                    <div class="portfolio__project-card--tabs---tab"></div>
+                </div>
+                <div class="portfolio__project-card--title">
+                    <span class="portfolio__project-card--title---text">Taعlim platform</span> <span class="portfolio__project-card--title---year">2022</span>
+                </div>
+                <p class="portfolio__project-card--description">
+                    A platform for online teaching and
+                    for making and sharing sermons and teaching online
+                </p>
+                <button class="portfolio__project-card--link">Visit site</button>
+            </div>
+        </div>
 
-            <img src="/img/next.png" alt="next" class="portfolio__btn">	     
-        </a>
+
+        <button class="portfolio__btn portfolio__btn-previous">&rarr;</button>
+        
+
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <form  class="contact__form">
             <span>Get in Touch</span>
 
@@ -270,7 +289,7 @@ I guarantee 100% to offer the best products in all my works, so you can get your
                 <input type="email" placeholder="Email..." name="email" id="email" required>
             </div>
             <div class="contact__form-area">
-                <textarea name="query" id="query" cols="30" rows="10" placeholder="Type here!"></textarea>
+                <textarea name="query" id="query" cols="30" rows="10" required placeholder="Type here!"></textarea>
             </div>
 
             <div class="contact__form-submit">
@@ -278,7 +297,7 @@ I guarantee 100% to offer the best products in all my works, so you can get your
             </div>
 
         </form>
-            <img class="contact__location-img" src="/img/location.png" alt="Salim's location">
+            <div class="contact__location-img"><iframe class='google__map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.4435454318645!2d30.103136514702136!3d-1.97694159855872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca7e706ef65af%3A0x7d9cd4ddcbefe8bc!2sICT%20Innovation%20Center!5e0!3m2!1sen!2srw!4v1645377367371!5m2!1sen!2srw" width="200rem" height="320rem"  style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
     </section>
 
     <p class="copyright">
@@ -301,5 +320,9 @@ I guarantee 100% to offer the best products in all my works, so you can get your
         </form>
     </div>
 </div>
+
+
+
+<script src="/js/main.js"></script>
 </body>
 </html>
