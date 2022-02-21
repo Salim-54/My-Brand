@@ -31,12 +31,12 @@
 
                 <img src="/img/logo.png" alt="logo" class="articles__nav-logo">
 
-                <li><a class="articles__nav-links--link articles__nav-links--link---active" href="../index.html">Home</a></li>
+                <li><a class="articles__nav-links--link " href="../index.html">Home</a></li>
                 <li><a class="articles__nav-links--link" href="">Services</a></li>
                 <li><a class="articles__nav-links--link" href="">Skills</a></li>
                 <li><a class="articles__nav-links--link" href="">About me</a></li>
                 <li><a class="articles__nav-links--link" href="">Portfolio</a></li>
-                <li><a class="articles__nav-links--link" href="">Blog</a></li>
+                <li><a class="articles__nav-links--link articles__nav-links--link---current articles__nav-links--link---active" href="">Blog</a></li>
                 <li><a class="articles__nav-links--link" href="#popup">Admin</a></li>
 
 
@@ -54,14 +54,27 @@
     <main class="card">
         <div class="card__tabs">
 
-            <button class="card__tabs-tab card__tabs-tab--1">01 Article</button>
-            <button class="card__tabs-tab card__tabs-tab--2">02 Article</button>
-            <button class="card__tabs-tab card__tabs-tab--3">03 Article</button>
-            <button class="card__tabs-tab card__tabs-tab--4">04 Article</button>
+            <button data-tab="1" class="card__tabs-tab card__tabs-tab--1 card__tabs-tab--active">01 Article</button>
+            <button data-tab="2" class="card__tabs-tab card__tabs-tab--2">02 Article</button>
+            <button data-tab="3" class="card__tabs-tab card__tabs-tab--3">03 Article</button>
+            <button data-tab="4" class="card__tabs-tab card__tabs-tab--4">04 Article</button>
 
             </div>
         </div>
-        <div class="card__content">
+        <div class="card__content card__content-1 card__content-active" data-tab="1">
+            <img class="card__content-img" src="/img/article.png" alt="Article image">
+            <h2 class="card__content-heading">My journey to ATLP</h2>
+            <p class="card__content-paragraph">
+                The benefit of having great friends. Then turned into some freelancing as a teenager. Then I got into startups and the web development agency life style.
+                Yes, you heard me right. I've worked for myself, for others, and my own companies. But it gets better.
+
+            </p>
+            <a href="./article.html" class="card__content-btn card__tabs-tab--1">
+                Read more . .
+            </a>
+            
+        </div>
+        <div class="card__content card__content-2  " >
             <img class="card__content-img" src="/img/article.png" alt="Article image">
             <h2 class="card__content-heading">How coding gave me career freedom</h2>
             <p class="card__content-paragraph">
@@ -69,14 +82,42 @@
                 Yes, you heard me right. I've worked for myself, for others, and my own companies. But it gets better.
 
             </p>
-            <a href="./article.html" class="card__content-btn">
+            <a href="./article.html" class="card__content-btn card__tabs-tab--2">
                 Read more . .
             </a>
+            
+        </div>
+        <div class="card__content card__content-3" data-tab="3">
+            <img class="card__content-img" src="/img/article.png" alt="Article image">
+            <h2 class="card__content-heading">The way I started Django</h2>
+            <p class="card__content-paragraph">
+                Django was not easy at all for me. Then turned into some freelancing as a teenager. Then I got into startups and the web development agency life style.
+                Yes, you heard me right. I've worked for myself, for others, and my own companies. But it gets better.
+
+            </p>
+            <a href="./article.html" class="card__content-btn card__tabs-tab--3">
+                Read more . .
+            </a>
+            
+        </div>
+        <div class="card__content card__content-4" data-tab="4">
+            <img class="card__content-img" src="/img/article.png" alt="Article image">
+            <h2 class="card__content-heading">The first machine design job</h2>
+            <p class="card__content-paragraph">
+                Designing machines started as a real big deal for me. Then turned into some freelancing as a teenager. Then I got into startups and the web development agency life style.
+                Yes, you heard me right. I've worked for myself, for others, and my own companies. But it gets better.
+
+            </p>
+            <a href="./article.html" class="card__content-btn card__tabs-tab--4">
+                Read more . .
+            </a>
+            
         </div>
 
         
         
     </main>
-    
+
+<script src="../js/blogList.js"></script>
 </body>
 </html>

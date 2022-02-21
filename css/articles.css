@@ -105,6 +105,10 @@ body {
   color: #fff;
   font-weight: 100; }
 
+.articles__nav-links--link---current{
+  color: rgba(115, 133, 203, 1);
+}
+
 .articles__nav-links--link---active {
   font-size: 1.6rem;
   font-weight: 600; }
@@ -121,15 +125,20 @@ body {
 .card__tabs-tab {
   display: inline-block;
   font-size: 1.6rem;
-  font-family: inherit;
+  font-family: sans-serif;
   font-weight: 500;
   border: none;
-  padding: .75rem 4.5rem;
+  min-width: max-content;
+  padding: 1.25rem 4.5rem;
   border-radius: 10rem;
   cursor: pointer;
   margin-right: 3.5rem;
   transform: translateY(-2.5rem);
   color: #4F5B66; }
+
+
+.card__tabs-tab--active{
+  transform: translateY(-3.5rem); }
 
 .card__tabs-tab:last-child {
   margin-right: 0; }
@@ -139,7 +148,6 @@ body {
 
 .card__tabs-tab--2 {
   background-image: linear-gradient(to right, #878d9f, #d7dfff);
-  transform: translateY(-3.5rem);
   color: #fff; }
 
 
@@ -150,12 +158,18 @@ body {
   background-image: linear-gradient(to right, #cd9ca3, #ffe9ec); }
 
 .card__content {
+  padding: 2rem 4rem;
+  display: none; }
+
+.card__content-active {
   display: grid;
   grid-template-columns: max-content 1fr;
   grid-template-rows: 4rem 1fr max-content;
   padding: 2rem 4rem;
   justify-items: center;
   row-gap: 2rem; }
+
+
 
 .card__content-heading {
   font-size: 2rem;
@@ -181,7 +195,7 @@ body {
 .card__content-btn {
   font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
-  background-image: linear-gradient(to right, #878d9f, #d7dfff);
+  /* background-image: linear-gradient(to right, #878d9f, #d7dfff); */
   outline: none;
   padding: .75rem 2rem;
   border: none;
