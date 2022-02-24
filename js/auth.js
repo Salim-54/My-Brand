@@ -3,32 +3,16 @@
 
 const signupForm = document.querySelector('#signup-form');
 
-signupForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    const email = signupForm['signup-email'].value;
-    const password = signupForm['signup-password'].value;
 
-    auth.createUserWithEmailAndPassword(email, password).then( cred => {
-        console.log(cred);
-        const popup = document.querySelector('.popup');
-        popup.style.display = 'none'; 
-        signupForm.reset();
-    })
-
-    .catch(error => {
-        // const errorCode = error.code;
-        const errorMessage = error?.message;
-        alert(errorMessage || "An error occurred");
-    });
-
+auth.onAuthStateChanged(user=> {
+    if (user){
+        console.log('user in', user);
+    } else {
+        console.log(user, 'user out')
+    }
 });
 
-auth.signOut().then(() =>{
-        console.log('User is Out!')
-    })
-    
-    
+
 let loginForm = document.querySelector('#login-form');
     
 loginForm.addEventListener('submit', (e) => {
@@ -39,9 +23,9 @@ loginForm.addEventListener('submit', (e) => {
     
     
     auth.signInWithEmailAndPassword(email,password).then( cred=> {
-        console.log(cred);
-        const popup = document.querySelector('.popup');
-        popup.style.display = 'none'; 
+        // console.log(cred);
+        // const popup = document.querySelector('.popup');
+        // popup.style.display = 'none'; 
         loginForm.reset();
         window.location.href = "/views/blogs.html";
 
@@ -51,34 +35,40 @@ loginForm.addEventListener('submit', (e) => {
         alert("user can't be found");
     });
 });
+const logout = document.querySelector('.admin__nav-logout');
+
+logout.addEventListener('click', (e) => {
+    e.preventDefault();
+    auth.signOut()
+    .then(() => {
+        window.location.href = "/index.html";
+    })
+})
 
 
-// function addUser(){
-//     const email = document.getElementById('email').value;
-//     const password = document.getElementById('password').value;
-//     const username = document.getElementById('username').value;
-//     authentication.createUserWithEmailAndPassword(email, password)
-//     .then((userCredential) => {
-//       const user = userCredential.user;
-//        alert("User created successfully")
-//     })
-//     .catch((error) => {
-//       const errorCode = error.code;
-//       const errorMessage = error.message;
-//       alert("Error: "+errorMessage)
-//     });
-// }
-// function loginUser(){
-//   const email = document.getElementById('email').value;
-//   const password = document.getElementById('password').value;
-//   authentication.signInWithEmailAndPassword(email,password).then(userCredential => {
-//     const user = userCredential.user;
-//     localStorage.setItem('user',JSON.stringify(user))
-//     window.location.href = "../admin/add.html";
-// })
-// .catch(error => {
-//     const errorCode = error.code;
-//     const errorMessage = error?.message;
-//     alert(errorMessage || "An error occurred");
-// });
-// }
+signupForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const email = signupForm['signup-email'].value;
+    const password = signupForm['signup-password'].value;
+
+    auth.createUserWithEmailAndPassword(email, password).then( cred => {
+        console.log(cred);
+        // const popup = document.querySelector('.popup');
+        // popup.style.display = 'none'; 
+        signupForm.reset();
+        logIn.style.marginLeft = "0%";
+        loginText.style.marginLeft = "0%";
+        auth.signOut().then(() =>{
+                console.log('User is Out!')
+            })
+            
+    })
+
+    .catch(error => {
+        // const errorCode = error.code;
+        const errorMessage = error?.message;
+        alert(errorMessage || "An error occurred");
+    });
+
+});
