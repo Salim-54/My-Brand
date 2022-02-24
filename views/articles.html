@@ -32,13 +32,12 @@
                 <img src="/img/logo.png" alt="logo" class="articles__nav-logo">
 
                 <li><a class="articles__nav-links--link " href="../index.html">Home</a></li>
-                <li><a class="articles__nav-links--link" href="">Services</a></li>
-                <li><a class="articles__nav-links--link" href="">Skills</a></li>
-                <li><a class="articles__nav-links--link" href="">About me</a></li>
-                <li><a class="articles__nav-links--link" href="">Portfolio</a></li>
+                <li><a class="articles__nav-links--link" href="../index.html">Services</a></li>
+                <li><a class="articles__nav-links--link" href="../index.html">Skills</a></li>
+                <li><a class="articles__nav-links--link" href="../index.html">About me</a></li>
+                <li><a class="articles__nav-links--link" href="../index.html">Portfolio</a></li>
                 <li><a class="articles__nav-links--link articles__nav-links--link---current articles__nav-links--link---active" href="">Blog</a></li>
-                <li><a class="articles__nav-links--link" href="#popup">Admin</a></li>
-
+                <li class="landing__nav-links--link landing__nav-links--link---popup" >Admin</li>
 
             </ul>
             <div class="articles__nav-profile">
@@ -117,6 +116,79 @@
         
         
     </main>
+
+
+
+    <div class="popup" id="popup">
+        <div class="container">
+        
+        
+              <div class="wrapper">
+                <p id="times" class="popup__login-close">&times;</p>
+                 <div class="title-text">
+                    <div class="title login">
+                       Login Form
+                    </div>
+                    <div class="title signup">
+                       Signup Form
+                    </div>
+                 </div>
+                 <div class="form-container">
+                    <div class="slide-controls">
+                       <input type="radio" name="slide" id="login" checked>
+                       <input type="radio" name="slide" id="signup">
+                       <label for="login" class="slide login">Login</label>
+                       <label for="signup" class="slide signup">Signup</label>
+                       <div class="slider-tab"></div>
+                    </div>
+                    <div class="form-inner">
+                       <form id="login-form" class="login">
+                          <div class="field">
+                             <input id="login-email" type="email" placeholder="Email Address" required>
+                          </div>
+                          <div class="field">
+                             <input id="login-password" type="password" placeholder="Password" required>
+                          </div>
+                          <div class="pass-link">
+                             <a href="#">Forgot password?</a>
+                          </div>
+                          <div class="field btn">
+                             <div class="btn-layer"></div>
+                             <input type="submit" value="Login">
+                          </div>
+                          <div class="signup-link">
+                             Not a member? <a href="">Signup now</a>
+                          </div>
+                       </form>
+                       <form id="signup-form" class="signup">
+                          <div class="field">
+                             <input type="email" id="signup-email" placeholder="Email Address" required>
+                          </div>
+                          <div class="field">
+                             <input type="text" id="signup-name" placeholder="User name" required>
+                          </div>
+                          <div class="field">
+                             <input type="password" id="signup-password" placeholder="Password" required>
+                          </div>
+                          <div class="field btn">
+                             <div class="btn-layer"></div>
+                             <input type="submit" id='signup-btn' value="Signup">
+                          </div>
+                       </form>
+                    </div>
+                 </div>
+              </div>
+        
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+    <script src="/js/firebase.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/main.js"></script>
 
 <script src="../js/blogList.js"></script>
 </body>
