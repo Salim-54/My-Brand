@@ -128,12 +128,7 @@ body {
   line-height: 1.9;
   margin-top: 3.5rem;
   font-family: "Montserrat", sans-serif; }
-/* 
-.fullstack__description button{
-  border: none;
-  outline: none;
-  cursor: pointer;
-  background-color: transparent;} */
+
 
 .fullstack__description-query {
   height: 1.6rem;
@@ -521,22 +516,14 @@ p.about__text {
 .popup {
   width: 100vw;
   height: 100vh;
-
-  /* width: 100%; */
-  /* height: 100vh; */
   backdrop-filter: blur(10px);
-  /* background-color: rgba(0, 0, 0, 0.3); */
   position: fixed;
   top: 0;
   left: 0;
   opacity: 0;
   visibility: hidden;
   transition: all .3s; }
-
-/* .popup:target {
-  opacity: 1;
-  visibility: visible; } */
-  
+ 
 
 .popup__login-close {
   position: absolute;
@@ -737,10 +724,7 @@ p.about__text {
     font-size: 50.5%; }
 .landing {
   min-height: 80vh;
-  /* width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-image: linear-gradient(rgba(56, 70, 77, 0.78), rgba(56, 70, 77, 0.78)), url(/img/land.jpg); */
+
 }
   
   

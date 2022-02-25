@@ -23,15 +23,12 @@ loginForm.addEventListener('submit', (e) => {
     
     
     auth.signInWithEmailAndPassword(email,password).then( cred=> {
-        // console.log(cred);
-        // const popup = document.querySelector('.popup');
-        // popup.style.display = 'none'; 
+
         loginForm.reset();
         window.location.href = "/views/blogs.html";
 
     }).catch(error => {
-        // const 
-        // const errorMessage = error?.message;
+
         alert("user can't be found");
     });
 });
@@ -54,8 +51,7 @@ signupForm.addEventListener('submit', (e) => {
 
     auth.createUserWithEmailAndPassword(email, password).then( cred => {
         console.log(cred);
-        // const popup = document.querySelector('.popup');
-        // popup.style.display = 'none'; 
+
         signupForm.reset();
         logIn.style.marginLeft = "0%";
         loginText.style.marginLeft = "0%";
@@ -66,7 +62,7 @@ signupForm.addEventListener('submit', (e) => {
     })
 
     .catch(error => {
-        // const errorCode = error.code;
+
         const errorMessage = error?.message;
         alert(errorMessage || "An error occurred");
     });
