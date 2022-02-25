@@ -513,6 +513,10 @@ p.about__text {
   font-size: 1.6rem;
   font-family: "Montserrat", sans-serif;
   width: 100%; }
+  
+  .google__map{
+    width: 100%;
+  }
 
 .popup {
   width: 100vw;
@@ -532,7 +536,7 @@ p.about__text {
 /* .popup:target {
   opacity: 1;
   visibility: visible; } */
-
+  
 
 .popup__login-close {
   position: absolute;
@@ -541,13 +545,11 @@ p.about__text {
   line-height: 2;
   font-size: 4rem;
   text-decoration: none;
+  cursor: pointer;
   color: #525D62;
   transition: all .2s; }
 
 
-  .google__map{
-    width: 100%;
-  }
   
   .container{
     display: grid;
