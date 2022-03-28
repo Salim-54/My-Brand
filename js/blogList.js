@@ -2,6 +2,7 @@
 
 const tabsContainer = document.querySelector('.card__tabs');
 const tabs = document.querySelectorAll('.card__tabs-tab');
+
 const tabsContent = document.querySelectorAll('.card__content')
 const navBar = document.querySelector('.articles__nav-links')
 // const activeTab = document.querySelector ('.');
@@ -25,9 +26,13 @@ tabsContainer.addEventListener('click', function(e) {
 
 //     clicked.classList.add('.card__tabs-tab--active');
 
+document.querySelectorAll(`.card__content-${clicked.dataset.tab}`).forEach(c =>{
+    
+    c.classList.add('card__content-active');
+});
 
-document.querySelector(`.card__content-${clicked.dataset.tab}`)
-        .classList.add('card__content-active');
+// document.querySelector(`.card__content-${clicked.dataset.tab}`)
+//         .classList.add('card__content-active');
 });
 
 

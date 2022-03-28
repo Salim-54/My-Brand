@@ -5,6 +5,9 @@ const login = document.querySelector('.popup__login');
 const closing = document.querySelector('.popup__login-close');
 const popupLink =  document.querySelector('.landing__nav-links--link---popup');
 const popup = document.querySelector('.popup');
+const hamburger = document.querySelector('.hamburger');
+const navList = document.querySelector('.landing__nav-links');
+const navListBlogs = document.querySelector('.articles__nav-links')
 
 
 
@@ -60,4 +63,37 @@ popupLink.addEventListener('click', (e) => {
 
 closing.addEventListener('click', () => {
     popup.style.display = 'none'; 
+});
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navList.classList.toggle('active');
+
 })
+
+document.querySelectorAll('.landing__nav-links--link').forEach(n => {
+  n.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navList.classList.remove('active'); 
+ 
+
+
+  })
+});
+hamburger.addEventListener('click', () => {
+  navListBlogs.classList.toggle('active');
+  
+
+})
+
+document.querySelectorAll('.articles__nav-links--link').forEach(n => {
+  n.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navListBlogs.classList.remove('active');  
+
+  })
+});
+
+//  SENDING A QUERY MESSAGE!!   //
+
+
