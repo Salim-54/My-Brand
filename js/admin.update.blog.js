@@ -27,7 +27,7 @@ const createBlog = async function () {
 	const category = document.getElementById("category").value
 
 		try {
-			const newBlog = await fetch("http://127.0.0.1:3000/api/v1/" + "blogs/" + blog_id, {
+			const newBlog = await fetch("https://atlp-mybrand-backend.herokuapp.com/api/v1/" + "blogs/" + blog_id, {
 				method: "PATCH",
 				headers: {
                     "Content-Type": "application/json",

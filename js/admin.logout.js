@@ -1,5 +1,5 @@
 const logoutUser = document.getElementById("logout-btn");
-const token = localStorage.getItem("token")
+const token = localStorage.getItem("token");
 
 
 
@@ -14,8 +14,7 @@ logoutUser.addEventListener('click', e =>{
         setTimeout(function () {
         msg.style.display = "none"},5000);
         alertMessage.innerHTML = `&nbsp;&nbsp; You are logging out!`
-        localStorage.removeItem("token");
-        localStorage.removeItem("role");
+        localStorage.clear();
 
         setTimeout(()=>{
             window.location.href = "../index.html"
