@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/x-icon" href="/img/favicon.png">
-    <link rel="stylesheet" href="/css//loader.css">
-
-    <link rel="stylesheet" href="../css/blogs.css">
+    <link rel="stylesheet" href="/css/loader.css">
+    <link rel="stylesheet" href="/css/profile.css">
 
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo Paaji 2">
@@ -19,9 +18,10 @@
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Blogs</title>
+    <title>Manage Users</title>
 </head>
 <body class="user">
+
 
     <div class="loader-container" id="loader-container">
         <div class="loader">
@@ -33,6 +33,7 @@
            <div class="loader__ball"></div>
          </div>
        </div>
+
 
     <nav class="admin">
         <nav class="admin__nav">
@@ -60,74 +61,113 @@
                 </figcaption>
             </div>
 
-            <a id="logout-btn" class="admin__nav-logout">
+            <a href="" id="logout-btn" class="admin__nav-logout">
                 Log Out
             </a>
 
         </nav>
     </nav>
-<!-- ------------------------------------------------------- -->
 
-
-<section title=".slideThree">
-    <!-- .slideThree -->
-    <div class="slideThree">  
-      <input type="checkbox" value="None" id="slideThree" name="check" checked />
-      <label for="slideThree" id="slide"></label>
-    </div>
-    <!-- end .slideThree -->
-  </section>
-  
-
-
-<!-- - ----------------------------------------------------- - -->
 
     <main class="container">
-        <div class="container__side" id="container__side">
+        <div class="container__side">
             <ul class="container__side-list">
-                <li class="container__side-list--item top-link link-active"><a href="/views/blogs.html">Manage Blogs</a></li>
+                <li class="container__side-list--item top-link "><a href="/views/blogs.html">Manage Blogs</a></li>
                 <li class="container__side-list--item" id="queries-hide"><a href="/views/queries.html">Manage Queries</a></li>
                 <li class="container__side-list--item"><a href="/views/comments.html">Manage Comments</a> </li>
-                <li class="container__side-list--item" id="users-hide"><a href="/views/users.html">Manage Users</a> </li>
+                <li class="container__side-list--item"><a href="/views/users.html">Manage Users</a> </li>
                 <li class="container__side-list--item" id="subscribers-hide"><a href="/views/subscriber.html">Manage Subscriber</a> </li>
-                <li class="container__side-list--item" id=""><a href="/views/profile.html">User Profile</a> </li>
+                <li class="container__side-list--item link-active" id=""><a href="/views/profile.html">User Profile</a> </li>
             </ul>
 
         </div>
         <div class="container__content">
-            <div class="container__content-heading" >
+            <div class="container__content-heading">
                 <h1 class="container__content-heading-head">
-                    Manage blogs
+                    Your Profile
                 </h1>
-                <a href="/views/editnew.html" style="display: none;" class="container__content-heading--btn">Edit new</a>
             </div>
-        <div id="blogs-container">
+<div id="users-show">
             
-            
-            <div class="container__content-row">
 
-                <h1 id="message-del">Are you sure!! you want to delete this Blog</h1>
 
-                <div class="container__content-row--btns">
-                    <a href="/views/blogs.html">
-                        <button class="container__content-row--edit">Back to blogs</button>
-                    </a>
-                    <button class="container__content-row--delete" id="delete-blog">Delete</button>
-                </div>
-            </div>
+
+
+
+    <form action="/views/blogs.html" id="newProfile">
+
+        <!-- USER NAME -->
+        <div class="float-label">
+          <input type="text" name="f-name" value="" id="userName" placeholder="Name">
         </div>
-    </div>
+        <br>
+
+        <!-- PASSWORD -->
+        <div class="float-label">
+          <input type="text" name="" value="" placeholder="Password" id="userPassword">
+        </div>
+        <br>
+
+        <!-- EMAIL ADDRESS -->
+        <div class="float-label">
+          <input type="text" name="f-name" value="" id="userEmail" placeholder="email address">
+        </div>
+        <br>
+       </div>
+
+       <button class="container__content-row--edit">Update Profile</button>
+    </form>
+
+
+        <!-- Display User Profile  -->
+        <!-- =============================================================== -->
+        <div id="updateProfile" class="row">
+
+          <!-- Update Name -->
+
+          <!-- Update Other information -->
+          <div class="user-right">
+            <h2>Profile <span>Info</span></h2>
+            <div class="user-info">
+              <table>
+                <tr>
+                    <td><p>email address : </p> </td>
+                    <td><p id="updateEmail"></p></td>
+                </tr>
+                <tr>
+                    <td><p>User name :</p></td>
+                    <td><p id="updateName"></p></td>
+                </tr>
+                <tr>
+                    <td><p>Role: </p></td>
+                    <td><p id="updateRole"></p></td>
+                </tr>
+
+
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+</div>
+
+
+
+
+            
+        </div>
     </main>
 
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script> -->
+    <!-- <script src="/js/admin.logout.js"></script> -->
+    <script src="/js/profile.js"></script>
 
 
-   
-
-    <!-- <script src="../js/blogs.admin.js"></script> -->
-    <script src="/js/admin.delete.js"></script>
-    <script src="/js/admin.logout.js"></script>
-    <!-- <script src="/js/main.js"></script> -->
-
-    
 </body>
 </html>

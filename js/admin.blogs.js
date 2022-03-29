@@ -12,6 +12,10 @@ const getBlogs = async () => {
     const role =localStorage.getItem('role');
     if(role == 'normal-user'){
         document.getElementById('queries-hide').style.display = 'none';
+        document.getElementById('subscribers-hide').style.display = 'none';
+        document.getElementById('queries-hide').style.display = 'none';
+
+
     }
 
 

@@ -9,7 +9,8 @@ const getUsers = async () => {
     const role =localStorage.getItem('role');
     if(role == 'normal-user'){
         document.getElementById('queries-hide').style.display = 'none';
-        // document.getElementById('delete-user').classList.add('delete-hide');
+        document.getElementById('subscribers-hide').style.display = 'none';
+        // document.getElementById('delete-user').classList.add('delete-hide'); 
     }
 
 	fetch("https://atlp-mybrand-backend.herokuapp.com/api/v1/" + "users", {

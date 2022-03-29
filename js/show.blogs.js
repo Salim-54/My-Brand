@@ -101,7 +101,7 @@ const subscription = async function () {
 	const subscribeBtn = document.getElementById("subscribe-btn").value
 
 		try {
-			const newSubscriber = await fetch("http://127.0.0.1:3000/api/v1/" + "subscribe", {
+			const newSubscriber = await fetch("https://atlp-mybrand-backend.herokuapp.com/api/v1/" + "subscribe", {
 				method: "POST",
 				headers: {
                     "Content-Type": "application/json",
