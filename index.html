@@ -5,16 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/x-icon" href="/img/favicon.png">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/loader.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo Paaji 2">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arial">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sansation Light">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Changa">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sansation">
 
 
 
@@ -24,11 +23,37 @@
     <title>Salim's Portfolio</title>
 </head>
 <body>
+
+    <div class="container" id="alert">
+        <div class="rectangle" id="rectangle">
+            <div class="notification-text">
+                <i class="fa fa-info-circle" aria-hidden="true" style="font-size: 2rem;"></i>
+                <span id="alert-msg">&nbsp;&nbsp;This is a test notification.</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="loader-container" id="loader-container">
+        <div class="loader">
+           <div class="loader__bar"></div>
+           <div class="loader__bar"></div>
+           <div class="loader__bar"></div>
+           <div class="loader__bar"></div>
+           <div class="loader__bar"></div>
+           <div class="loader__ball"></div>
+         </div>
+       </div>
+
+
     <main class="landing" id="landing">
         <nav class="landing__nav">
+
+            <div class="brand">
+                <img src="/img/logo.png" alt="logo" class="landing__nav-logo">
+            </div>
+
             <ul class="landing__nav-links">
 
-                <img src="/img/logo.png" alt="logo" class="landing__nav-logo">
 
                 <li><a class="landing__nav-links--link landing__nav-links--link---active" href="">Home</a></li>
                 <li><a class="landing__nav-links--link" href="">Services</a></li>
@@ -46,6 +71,12 @@
                 <p class="landing__nav-profile--name"> <span class="landing__nav-profile--name---first">Ndayisabye</span> <br> <span class="landing__nav-profile--name---last">Salim</span></p>
                 <!-- <div class="landing__nav-profile-name-last">Salim</div> -->
                 </figcaption>
+            </div>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </nav>
         <header class="fullstack">
@@ -85,7 +116,7 @@
                 </div>
                 <div class="service__develop-card--description service__container-card--description">
                     <p>
-                        <span class="1">MORDERN UI/UX DESIGNS</span> 
+                        <span class="1">FULL-STACK DEVELOPMENT</span> 
                         <br>
                         <span class="2">FOR BOTH WEB AND MOBILE APPS</span> 
                     </p>
@@ -99,9 +130,9 @@
                 </div>
                 <div class="service__develop-card--description service__container-card--description">
                     <p>
-                        <span class="1">MORDERN UI/UX DESIGNS</span> 
+                        <span class="1">MACHINE DESIGN &</span> 
                         <br>
-                        <span class="2">FOR BOTH WEB AND MOBILE APPS</span> 
+                        <span class="2">EMBEDDED SYSTEM PROGRAMMING</span> 
                     </p>
                 </div>
             </div>
@@ -246,7 +277,7 @@ I guarantee 100% to offer the best products in all my works, so you can get your
             </div>
         </div>
         <div class="portfolio__project portfolio__project-2">
-            <img src="/img/taalim2.jpg" alt="Project image" class="portfolio__project-img">
+            <!-- <img src="/img/taalim2.jpg" alt="Project image" class="portfolio__project-img"> -->
             <div class="portfolio__project-card">
                 <div class="portfolio__project-card--tabs">
                     <div class="portfolio__project-card--tabs---tab"></div>
@@ -273,27 +304,34 @@ I guarantee 100% to offer the best products in all my works, so you can get your
     </section>
 
     <section class="contact" id="contact">
-        <form  class="contact__form">
+        <form  class="contact__form" id="query-form">
             <span>Get in Touch</span>
 
            <div class="contact__form-person">
             <div class="contact__form-person--name">
                 <input type="text" name="name" id="name" placeholder="Full names..." required>
+                <label class="valid" for="name" style="font-size: 1.6rem;">Name is required!!</label>
+
             </div>
             <div class="contact__form-person--phone">
-                <input type="tel" id="number" optional placeholder="Tel:">
+                <input type="tel" id="number" name="phone" optional placeholder="Tel:">
+               
+
             </div>
 
            </div>
             <div class="contact__form-email">
-                <input type="email" placeholder="Email..." name="email" id="email" required>
+                <input type="email" placeholder="Email..." name="email" id="email" class="" required>
+                <label class="valid" for="email" style="font-size: 1.6rem;">Email must is required!!</label>
+
             </div>
-            <div class="contact__form-area">
-                <textarea name="query" id="query" cols="30" rows="10" required placeholder="Type here!"></textarea>
+            <div class="contact__form-area ">
+                <textarea class="invalid" name="query" id="query" cols="30" rows="10"  required placeholder="Type here!"></textarea>
+                <label class="valid" for="query" style="font-size: 1.6rem;">Message must have content!!</label>
             </div>
 
             <div class="contact__form-submit">
-                <input type="submit" value="Send Query">
+                <input type="submit" id="query-btn" value="Send Query">
             </div>
 
         </form>
@@ -305,7 +343,7 @@ I guarantee 100% to offer the best products in all my works, so you can get your
     </p>
 
 <div class="popup" id="popup">
-        <div class="container">
+        <div class="container-form">
         
         
               <div class="wrapper">
@@ -339,7 +377,7 @@ I guarantee 100% to offer the best products in all my works, so you can get your
                           </div>
                           <div class="field btn">
                              <div class="btn-layer"></div>
-                             <input type="submit" value="Login">
+                             <input id="login-btn" type="submit" value="Login">
                           </div>
                           <div class="signup-link">
                              Not a member? <a href="">Signup now</a>
@@ -357,7 +395,7 @@ I guarantee 100% to offer the best products in all my works, so you can get your
                           </div>
                           <div class="field btn">
                              <div class="btn-layer"></div>
-                             <input type="submit" id='signup-btn' value="Signup">
+                             <input  type="submit" id='signup-btn' value="Signup">
                           </div>
                        </form>
                     </div>
@@ -367,12 +405,10 @@ I guarantee 100% to offer the best products in all my works, so you can get your
         </div>
         </div>
 
-        <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
-        <script src="/js/firebase.js"></script>
-        <script src="/js/auth.js"></script>
 
+        <!-- <script src="/js/token.js"></script> -->
+        <script src="/js/authentication.js"></script>
+        <script src="/js/querysend.js"></script>
 
 
 <script src="/js/main.js"></script>

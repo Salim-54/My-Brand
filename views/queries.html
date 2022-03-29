@@ -6,14 +6,13 @@
     <link rel="icon" type="image/x-icon" href="/img/favicon.png">
 
     <link rel="stylesheet" href="../css/queries.css">
+    <link rel="stylesheet" href="../css//loader.css">
 
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baloo Paaji 2">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arial">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sansation Light">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Changa">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 
@@ -23,6 +22,27 @@
     <title>Manage Queries</title>
 </head>
 <body class="user">
+
+    <div class="container-alert" id="alert">
+        <div class="rectangle">
+            <div class="notification-text">
+                <i class="fa fa-info-circle" aria-hidden="true" style="font-size: 2rem;"></i>
+                <span id="alert-msg">&nbsp;&nbsp;This is a test notification.</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="loader-container" id="loader-container">
+        <div class="loader">
+           <div class="loader__bar"></div>
+           <div class="loader__bar"></div>
+           <div class="loader__bar"></div>
+           <div class="loader__bar"></div>
+           <div class="loader__bar"></div>
+           <div class="loader__ball"></div>
+         </div>
+       </div>
+
 
     <nav class="admin">
         <nav class="admin__nav">
@@ -50,7 +70,7 @@
                 </figcaption>
             </div>
 
-            <a href="" id="logout" class="admin__nav-logout">
+            <a id="logout-btn" class="admin__nav-logout">
                 Log Out
             </a>
 
@@ -68,13 +88,14 @@
             </ul>
 
         </div>
-        <div class="container__content">
+        <div class="container__content" >
             <div class="container__content-heading">
                 <h1 class="container__content-heading-head">
                     Manage Queries
                 </h1>
             </div>
-        <div class="container__query">
+        <div id="queries-container" class="container__conten">
+        <!-- <div class="container__query">
             <div class="container__content-row">
                 <div class="container__content-row--user">
                     <h5 style="font-size: 1.6rem; margin-right: 2rem;"></h5>01
@@ -87,7 +108,6 @@
 
                     <img class="container__content-row--img" src="/img/phone.png" alt="files">
                     <span class="container__content-row--nbr">0789393555</span>
-                    <span>Blogs</span>
 
                 </div>
    
@@ -121,7 +141,6 @@
 
                     <img class="container__content-row--img" src="/img/phone.png" alt="files">
                     <span class="container__content-row--nbr">0789393555</span>
-                    <span>Blogs</span>
 
                 </div>
    
@@ -156,7 +175,6 @@
 
                     <img class="container__content-row--img" src="/img/phone.png" alt="files">
                     <span class="container__content-row--nbr">0789393555</span>
-                    <span>Blogs</span>
 
                 </div>
    
@@ -192,7 +210,6 @@
 
                     <img class="container__content-row--img" src="/img/phone.png" alt="files">
                     <span class="container__content-row--nbr">0789393555</span>
-                    <span>Blogs</span>
 
                 </div>
    
@@ -208,14 +225,14 @@
 
             <p class="query">It's not an overnight success story. It takes time and hard work. It takes powering through frustration and struggling with hard problems that stretch the limits of your brain. It takes learning new things every single day .
             </p>
-        </div>         
+        </div>          -->
         </div>
+    </div>
     </main>
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
-    <script src="/js/firebase.js"></script>
-    <script src="/js/auth.js"></script>
+    <script src="../js/admin.queries.js"></script>
+
+    <script src="/js/admin.logout.js"></script>
+    <!-- <script src="/js/auth.js"></script> -->
 
 
     

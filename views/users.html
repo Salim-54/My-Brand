@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/x-icon" href="/img/favicon.png">
-
+    <link rel="stylesheet" href="/css/loader.css">
     <link rel="stylesheet" href="../css/users.css">
 
 
@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Heebo">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arial">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sansation Light">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Changa">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 
@@ -23,6 +21,19 @@
     <title>Manage Users</title>
 </head>
 <body class="user">
+
+
+    <div class="loader-container" id="loader-container">
+        <div class="loader">
+           <div class="loader__bar"></div>
+           <div class="loader__bar"></div>
+           <div class="loader__bar"></div>
+           <div class="loader__bar"></div>
+           <div class="loader__bar"></div>
+           <div class="loader__ball"></div>
+         </div>
+       </div>
+
 
     <nav class="admin">
         <nav class="admin__nav">
@@ -50,7 +61,7 @@
                 </figcaption>
             </div>
 
-            <a href="../index.html" class="admin__nav-logout">
+            <a href="" id="logout-btn" class="admin__nav-logout">
                 Log Out
             </a>
 
@@ -62,7 +73,7 @@
         <div class="container__side">
             <ul class="container__side-list">
                 <li class="container__side-list--item top-link "><a href="/views/blogs.html">Manage Blogs</a></li>
-                <li class="container__side-list--item"><a href="/views/queries.html">Manage Queries</a></li>
+                <li class="container__side-list--item" id="queries-hide"><a href="/views/queries.html">Manage Queries</a></li>
                 <li class="container__side-list--item"><a href="/views/comments.html">Manage Comments</a> </li>
                 <li class="container__side-list--item link-active"><a href="/views/users.html">Manage Users</a> </li>
             </ul>
@@ -74,6 +85,7 @@
                     Manage Users
                 </h1>
             </div>
+<div id="users-show">
             <div class="container__content-row">
                 <div class="container__content-row--user">
                     <h5 style="font-size: 1.6rem; margin-right: 2rem;"></h5>01
@@ -241,7 +253,7 @@
                     <button class="container__content-row--delete">Delete user</button>
                 </div>
             </div>
-
+</div>
 
 
 
@@ -250,11 +262,11 @@
         </div>
     </main>
 
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
-    <script src="/js/firebase.js"></script>
-    <script src="/js/auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script> -->
+    <!-- <script src="/js/admin.logout.js"></script> -->
+    <script src="/js/admin.users.js"></script>
 
 
 </body>
