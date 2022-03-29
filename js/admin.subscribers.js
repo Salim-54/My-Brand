@@ -1,0 +1,79 @@
+const msg = document.getElementById('alert');
+const loader = document.getElementById("loader-container");
+const alertMessage = document.getElementById("alert-msg");
+
+const getUsers = async () => {
+    loader.style.display = "flex";
+    let result = [];
+    const token =localStorage.getItem('token');
+    const role =localStorage.getItem('role');
+    if(role == 'normal-user'){
+        document.getElementById('queries-hide').style.display = 'none';
+        // document.getElementById('delete-user').classList.add('delete-hide');
+    }
+
+	fetch("https://atlp-mybrand-backend.herokuapp.com/api/v1/" + "subscribe", {
+		method: "GET",
+		headers: {
+			"Content-Type": "application/json",
+			"authorization": 'Bearer '+ token
+		},
+	})
+		.then((response) => response.json())
+		.then((json) => {
+
+            loader.style.display = "none";
+
+            //     msg.style.display = "flex"; ${(counter += 1)}
+            //     setTimeout(function () {
+            //         msg.style.display = "none"},5000);
+            //     alertMessage.innerHTML = `&nbsp;&nbsp; Welcome ${email}!`;
+
+            
+			result = json.data;
+			var counter = 0;
+			let published = new Date(result.createdAt).toDateString();
+			result?.length
+				? (document.getElementById("users-show").innerHTML = result
+						.map(
+							(res) => `
+                            <div class="container__content-row">
+                            <div class="container__content-row--user">
+                                <h5 style="font-size: 1.6rem; margin-right: 2rem;"></h5>${(counter += 1)}
+                            </div>
+                            <h2 class="container__content-row--name">
+                            ${published}
+                            </h2>
+                            <span class="container__content-row--email">${res?.email}</span>
+                            <div class="container__content-row-b">
+            
+                                <img class="container__content-row--img" src="/img/file.png" alt="files">
+                                <span class="container__content-row--nbr">3</span>
+                                <span>Notifications</span>
+            
+                            </div>
+                            <div class="container__content-row--btns">
+                            <button class="container__content-row--edit">Contact subscriber</button>
+                            <button class="container__content-row--delete">Unsubscribe</button>
+                        </div>
+                        </div>
+
+						`
+						)
+						.join(""))
+				: (document.getElementById("users-show").innerHTML = `<h1>OOOOOOHHHHH SORRY YOU ARE NOT ADMIN</h1>`);
+
+                if(role == 'normal-user'){
+                    // document.getElementById('queries-hide').classList.add('delete-hide');
+                    document.querySelectorAll('.delete-user').forEach(del =>{
+                        del.classList.add('delete-hide');
+                    })
+                }
+            
+		})
+		.catch((err) => {
+            console.log(err)
+            document.getElementById("users-show").innerHTML = `<h1>OOOOOOHHHHH SORRY YOU ARE NOT ADMIN</h1>`;
+        });
+};
+getUsers();
